@@ -8,13 +8,15 @@
     "build:prod:analyzer": "webpack --env mode=production analyzer=true",
     "build:mobile": "webpack --env mode=production platform=mobile",
     "build:desktop": "webpack --env mode=production platform=desktop",
-    "start": "webpack serve --open --env port=5000 mode=development"
+    "start": "webpack serve --open --env port=5000 mode=development",
+    "typecheck": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.8.3",
     "@types/react": "^18.2.25",
@@ -23,8 +25,10 @@
     "@types/webpack-bundle-analyzer": "^4.7.0",
     "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^6.8.1",
+    "fork-ts-checker-webpack-plugin": "^9.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "react-refresh-typescript": "^2.0.9",
     "sass": "^1.69.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",

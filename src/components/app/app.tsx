@@ -10,12 +10,12 @@ export const App = () => {
 
   // использование env-переменных
   // tree-shaking в webpack выкинет невыполняемый код
-  if (__PLATFORM__ === 'desktop') {
-    return <div>IS DESKTOP PLATFORM</div>;
-  }
-  if (__PLATFORM__ === 'mobile') {
-    return <div>IS MOBILE PLATFORM</div>;
-  }
+  // if (__PLATFORM__ === 'desktop') {
+  //   return <div>IS DESKTOP PLATFORM</div>;
+  // }
+  // if (__PLATFORM__ === 'mobile') {
+  //   return <div>IS MOBILE PLATFORM</div>;
+  // }
 
   return (
     <div className={styles.app}>
