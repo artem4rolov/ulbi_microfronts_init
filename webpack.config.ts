@@ -1,5 +1,9 @@
 import * as path from 'path';
-import { BuildMode, BuildPaths } from './config/build/types/types';
+import {
+  BuildMode,
+  BuildPaths,
+  BuildPlatform,
+} from './config/build/types/types';
 import * as webpack from 'webpack';
 import 'webpack-dev-server';
 import { buildWebpack } from './config/build/build-webpack';
@@ -8,6 +12,7 @@ interface EnvVariables {
   mode: BuildMode;
   port: number;
   analyzer: boolean;
+  platform: BuildPlatform;
 }
 
 module.exports = (env: EnvVariables) => {
@@ -23,6 +28,7 @@ module.exports = (env: EnvVariables) => {
     port: env.port ?? 3000,
     paths,
     analyzer: env.analyzer,
+    platform: env.platform ?? 'desktop',
   });
 
   return config;

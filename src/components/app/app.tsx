@@ -8,8 +8,18 @@ import Icon from '@/assets/image.svg';
 export const App = () => {
   const [count, setCount] = useState(0);
 
+  // использование env-переменных
+  // tree-shaking в webpack выкинет невыполняемый код
+  if (__PLATFORM__ === 'desktop') {
+    return <div>IS DESKTOP PLATFORM</div>;
+  }
+  if (__PLATFORM__ === 'mobile') {
+    return <div>IS MOBILE PLATFORM</div>;
+  }
+
   return (
     <div className={styles.app}>
+      <h1>{__PLATFORM__}</h1>
       <div>
         <img width="20px" height="20px" src={immagePng} alt="" />
         <img width="20px" height="20px" src={immageJpg} alt="" />
