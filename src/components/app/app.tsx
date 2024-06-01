@@ -18,7 +18,7 @@ export const App = () => {
   // }
 
   return (
-    <div className={styles.app}>
+    <div data-test-id={'App.DaataTestId'} className={styles.app}>
       <h1>{__PLATFORM__}</h1>
       <div>
         <img width="20px" height="20px" src={immagePng} alt="" />
