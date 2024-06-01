@@ -5,8 +5,21 @@ import immagePng from '@/assets/image.png';
 import immageJpg from '@/assets/image.jpg';
 import Icon from '@/assets/image.svg';
 
+function TODO() {
+  TODO2();
+}
+
+function TODO2() {
+  throw new Error();
+}
+
 export const App = () => {
   const [count, setCount] = useState(0);
+
+  const increment = () => {
+    // setCount(prev => prev + 1)
+    TODO();
+  };
 
   // использование env-переменных
   // tree-shaking в webpack выкинет невыполняемый код
@@ -33,7 +46,7 @@ export const App = () => {
       <br />
       <Link to="/about">navigate to About</Link>
       <h1 className={styles.valut}>{count}</h1>{' '}
-      <button onClick={() => setCount(prev => prev + 1)}>+</button>
+      <button onClick={increment}>+</button>
       <Outlet />
     </div>
   );

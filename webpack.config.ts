@@ -18,7 +18,7 @@ interface EnvVariables {
 module.exports = (env: EnvVariables) => {
   const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
-    ouput: path.resolve(__dirname, 'build'),
+    ouput: path.resolve(__dirname, 'dist'),
     html: path.resolve(__dirname, 'public', 'index.html'),
     public: path.resolve(__dirname, 'public'),
     src: path.resolve(__dirname, 'src'),
